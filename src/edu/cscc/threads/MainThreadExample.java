@@ -1,4 +1,4 @@
-package edu.cscc;
+package edu.cscc.threads;
 
 /** Demonstrates the main thread and how to capture it and manipulate */
 

@@ -1,4 +1,4 @@
-package edu.cscc;
+package edu.cscc.threads;
 
 /**  Demonstrates how to create multiple threads by implementing the Runnable interface */
 
@@ -27,18 +27,23 @@ public class ImplementingRunnable implements Runnable {
         }
         System.out.println("Exiting " + name + " thread");
     }
+
+    /** Factory method that creates, starts and returns a thread object */
+    public static ImplementingRunnable createAndStart(String threadName) {
+        ImplementingRunnable newThread = new ImplementingRunnable(threadName);
+        newThread.t.start();
+        return newThread;
+    }
 }
 
 class ThreadDemo {
     public static void main(String[] args) {
 
         // Create each thread
-        ImplementingRunnable t1 = new ImplementingRunnable("First");
+        ImplementingRunnable t1 = ImplementingRunnable.createAndStart("One");       // Created using a factory method
         ImplementingRunnable t2 = new ImplementingRunnable("Second");
         ImplementingRunnable t3 = new ImplementingRunnable("Third");
 
-        // Start each thread
-        t1.t.start();
         t2.t.start();
         t3.t.start();
 
