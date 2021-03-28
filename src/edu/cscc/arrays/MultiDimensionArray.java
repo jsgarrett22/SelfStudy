@@ -11,8 +11,8 @@ public class MultiDimensionArray {
         boolean validateIcon = false;
 
         // Board Variables
-        int width = 3;
-        int height = 3;
+        int width = 8;
+        int height = 8;
         char defaultValue = '_';
 
         // Player and Computer Variables
@@ -74,11 +74,11 @@ public class MultiDimensionArray {
         // draw header based on width of board
         for (int i = 0; i < width; i++) {
             if (i == 0) {
-                System.out.print("| ");
+                //System.out.print("| ");
             }
-            System.out.print(" " + i + " ");
+            System.out.print("| " + i + " ");
             if (i == width - 1) {
-                System.out.print(" | ");
+                System.out.print("| ");
             }
         }
 
