@@ -11,8 +11,8 @@ public class MultiDimensionArray {
         boolean validateIcon = false;
 
         // Board Variables
-        int width = 8;
-        int height = 8;
+        int width = 3;
+        int height = 3;
         char defaultValue = '_';
 
         // Player and Computer Variables
